@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>multi step registration form</title>
+        <link rel="stylesheet" href="msl.css">
+    </head>
+    <body>
+        <div class="container">    
+            <div class="progress-btn">
+                <div id="progress"></div>
+                <div class="col">step1</div>
+                <div class="col">step2</div>
+                <div class="col">step3</div>
+                
+            </div>
+        
+            <form action="#" id="form1" class="input-group">
+                
+            
+                <h3>CREATE ACCOUNT</h3>
+                
+                
+                <label for="name">Name</label>
+                <input type="text" id="name"class="input-field" placeholder="Enter your name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email"class="input-field" placeholder="Enter your email" required>
+                <label for="mobile">Mobile number</label>
+                <input type="text" id="mobile" class="input-field" placeholder="mobile no." required>
+               
+                <div class="btn-feild">
+                <button type="button" class="btn" id="next1" >Next</button>
+                </div>
+            </form>
+            <form action="#" id="form2" class="input-group">
+                
+            
+                <h3>SOCIAL MEDIA </h3>
+                
+                
+                <label for="linkedin">Linkedin</label>
+                <input type="text" id="linkedin"class="input-field" placeholder="Enter your profile">
+                <label for="githun">Github</label>
+                <input type="text" id="github"class="input-field" placeholder="Enter your profile">
+                <div class="btn-feild">
+                <button type="button" class="btn" id="back1">Back</button>
+                <button type="button" class="btn" id="next2">Next</button>
+                </div>
+            </form>
+            <form action="#" id="form3" class="input-group">
+                
+                <input type="password" id="pwd"class="input-field" placeholder="Enter your password" required>
+             
+                <input type="password" id="c-pwd"class="input-field" placeholder="Confirm password" required>
+                <div class="btn-feild">
+                <button type="button" class="btn" id="back2">Back</button>
+                <button type="button" class="btn" id="submit">Submit</button>
+                </div>
+            </form>
+            
+         </div>
+    </body>
+</html>
+<script>
+var form1=document.getElementById("form1");
+var form2=document.getElementById("form2");
+var form3=document.getElementById("form3");
+var next1=document.getElementById("next1");
+var next2=document.getElementById("next2");
+var back1=document.getElementById("back1");
+var back2=document.getElementById("back2");
+var progress=document.getElementById("progress");
+
+var name=document.getElementById("name");
+
+next1.onclick=function(){
+
+    form1.style.left="-450px";
+    form2.style.left="40px";
+    progress.style.width="266.6px";
+}
+next2.onclick=function(){
+
+form2.style.left="-450px";
+form3.style.left="40px";
+progress.style.width="400px";
+
+}
+back1.onclick=function(){
+
+form1.style.left="40px";
+form2.style.left="450px";
+progress.style.width="133.3px";
+
+}
+back2.onclick=function(){
+
+form2.style.left="40px";
+form3.style.left="450px";
+progress.style.width="266.6px";
+
+}
+
+
+
+
+</script>
